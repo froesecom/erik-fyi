@@ -1,1 +1,9 @@
 /*Ain't no fronties up in here*/
+#sprite-erik {
+  width: 345;
+  overflow: hidden;
+}
+
+#erik-head {
+  position: relative;
+}
