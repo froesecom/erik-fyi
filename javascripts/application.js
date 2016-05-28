@@ -1,4 +1,4 @@
 $(window).load(function() {
   
-  ERIK.talk();
+  erik.talk();
 });

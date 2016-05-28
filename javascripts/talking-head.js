@@ -1,4 +1,4 @@
-var ERIK = {
+var erik = {
   sprite: {
     frame: {
       width: 345,
@@ -6,7 +6,7 @@ var ERIK = {
     },
     animate: false,
     moveToFrame(n) {
-      var fWidth = ERIK.sprite.frame.width,
+      var fWidth = erik.sprite.frame.width,
          moveToF = n * fWidth;
       $("#erik-head").css("left", -moveToF);
     },
@@ -14,16 +14,17 @@ var ERIK = {
   }
 };
 
-ERIK.talk = function(){
-  ERIK.animate = true;
-  var frames = ERIK.sprite.talkingFrames;
+erik.talk = function(){
+  erik.sprite.animate = true;
+  var frames = erik.sprite.talkingFrames;
   function chatterBox(){
-    if(ERIK.animate = true) {
+    if(erik.sprite.animate === true) {
       var f = frames.shift();
       //append to end of frames
       frames.push(f);
-      ERIK.sprite.moveToFrame(f);
+      erik.sprite.moveToFrame(f);
       setTimeout(chatterBox, 150);
+      
     }
   }
   chatterBox();
