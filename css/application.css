@@ -1,4 +1,19 @@
 /*Ain't no fronties up in here*/
+/*TYPOGRAPHY*/
+body {
+  font-family: "Consolas";
+  color: white;
+}
+
+h1{
+  font-family: "Verdana";
+}
+
+/*CHROME*/
+body {
+  background-color: #C4C6CE;
+}
+
 #sprite-erik {
   width: 345;
   overflow: hidden;
