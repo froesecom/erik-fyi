@@ -1,14 +1,10 @@
 /*Ain't no fronties up in here*/
-/*TYPOGRAPHY*/
-body {
-  font-family: "Consolas";
-  color: #0195BD;
+
+#header {
+  text-align: center;
 }
 
-h1{
-  font-family: "Verdana";
-  color: #A6EBD6;
-}
+
 
 /*CHROME*/
 body {
@@ -16,12 +12,14 @@ body {
 }
 
 #sprite-erik {
-  width: 345;
+  width: 345px;
   overflow: hidden;
+  margin: auto;
 }
 
 #erik-head {
   position: relative;
+
 }
 
 
