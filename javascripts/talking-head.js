@@ -3,8 +3,8 @@ var erik = {
     frame: {
       baseWidth: 345,
       baseHeight: 588,
-      width: 172.5,
-      height: 294
+      width: 172.5, //set this dynamically
+      height: 294 //set this dynamically
     },
     animate: false,
     moveToFrame(n) {

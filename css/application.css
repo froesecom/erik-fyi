@@ -4,10 +4,18 @@
   text-align: center;
 }
 
-
 /*CHROME*/
 body {
   background-color: #03151F;
+}
+
+#speaker-box {
+  border: 2px solid;
+  border-color: #0195BD;
+  width: 80%;
+  height: 150px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 #sprite-erik {
