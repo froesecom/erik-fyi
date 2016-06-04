@@ -5,14 +5,13 @@
 }
 
 
-
 /*CHROME*/
 body {
   background-color: #03151F;
 }
 
 #sprite-erik {
-  width: 345px;
+  display:none;
   overflow: hidden;
   margin: auto;
 }
