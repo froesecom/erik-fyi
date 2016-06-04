@@ -2,16 +2,17 @@
 /*TYPOGRAPHY*/
 body {
   font-family: "Consolas";
-  color: white;
+  color: #0195BD;
 }
 
 h1{
   font-family: "Verdana";
+  color: #A6EBD6;
 }
 
 /*CHROME*/
 body {
-  background-color: #C4C6CE;
+  background-color: #03151F;
 }
 
 #sprite-erik {
@@ -22,3 +23,5 @@ body {
 #erik-head {
   position: relative;
 }
+
+
