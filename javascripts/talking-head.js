@@ -6,14 +6,14 @@ var erik = {
       width: 172.5, //set this dynamically
       height: 294 //set this dynamically
     },
-    animate: false,
     moveToFrame(n) {
       var fWidth = erik.sprite.frame.width,
          moveToF = n * fWidth;
       $("#erik-head").css("left", -moveToF);
     },
     talkingFrames: [1,2,1,0]
-  }
+  },
+  speaking: false
 };
 
 erik.init = function(){
@@ -24,11 +24,13 @@ erik.init = function(){
 
 }
 
-erik.talk = function(){
-  erik.sprite.animate = true;
+erik.talk = function(words){
+  erik.speaking = true;
+  erik.say(words);
+  
   var frames = erik.sprite.talkingFrames;
   function chatterBox(){
-    if(erik.sprite.animate === true) {
+    if(erik.speaking === true) {
       var f = frames.shift();
       //append to end of frames
       frames.push(f);
@@ -39,6 +41,25 @@ erik.talk = function(){
   }
   chatterBox();
   
+};
+
+erik.say = function(chars){
+  var char = chars.shift();
+  var timeout;
+  
+  if (char === ","){
+    timeout = 400;
+  } else if (char.search(/[!.:;?]/) >= 0) {
+    timeout = 800;
+  } else {
+    timeout = 40;
+  }
+
+  $("#speaker-box").append(char);
+
+  if(erik.speaking === true && chars.length >= 1 ) {
+    setTimeout(function(){erik.say(chars)}, timeout);
+  }; 
 };
 
 

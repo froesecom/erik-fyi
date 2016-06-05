@@ -1,4 +1,4 @@
 $(window).load(function() {
   erik.init();
-  erik.talk();
+  erik.talk(["t", "e", "s", "t"]);
 });

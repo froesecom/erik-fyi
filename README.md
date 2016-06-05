@@ -4,6 +4,7 @@ One day, I will finally build my personal website. Promise.
 ## TODO
 - mobile media queries for speaker box etc
 - animate speaker box borders in and out
+- add meta data
 - add typing function
 - minimise assets
 - optimise sprite
