@@ -27,7 +27,10 @@ erik.init = function(){
 erik.talk = function(words){
   erik.speaking = true;
   erik.say(words);
-  
+  erik.animate();
+};
+
+erik.animate = function(){
   var frames = erik.sprite.talkingFrames;
   function chatterBox(){
     if(erik.speaking === true) {
@@ -40,7 +43,6 @@ erik.talk = function(words){
     }
   }
   chatterBox();
-  
 };
 
 erik.say = function(chars){
@@ -49,17 +51,29 @@ erik.say = function(chars){
   
   if (char === ","){
     timeout = 400;
+    //erik.stopSpeaking();
   } else if (char.search(/[!.:;?]/) >= 0) {
     timeout = 800;
+    //erik.stopSpeaking();
   } else {
-    timeout = 40;
+    //erik.speaking = true;
+    timeout = 80;
   }
 
   $("#speaker-box").append(char);
 
-  if(erik.speaking === true && chars.length >= 1 ) {
-    setTimeout(function(){erik.say(chars)}, timeout);
+  if(chars.length >= 1 ) {
+    setTimeout(function(){
+      erik.say(chars);
+    }, timeout);
+  } else {
+    erik.stopSpeaking();
   }; 
+};
+
+erik.stopSpeaking = function(){
+  erik.speaking = false;
+  erik.sprite.moveToFrame(0);
 };
 
 

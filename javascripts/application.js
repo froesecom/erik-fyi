@@ -1,4 +1,4 @@
 $(window).load(function() {
   erik.init();
-  erik.talk(["t", "e", "s", "t"]);
+  erik.talk("Nothing to see here. Move along.".split(""));
 });
