@@ -26,7 +26,7 @@ erik.init = function(){
 
 erik.talk = function(words){
   erik.speaking = true;
-  erik.say(words);
+  erik.say(words.split(""));
   erik.animate();
 };
 
@@ -51,12 +51,11 @@ erik.say = function(chars){
   
   if (char === ","){
     timeout = 400;
-    //erik.stopSpeaking();
+    erik.stopSpeaking();
   } else if (char.search(/[!.:;?]/) >= 0) {
     timeout = 800;
-    //erik.stopSpeaking();
+    erik.stopSpeaking();
   } else {
-    //erik.speaking = true;
     timeout = 80;
   }
 
@@ -64,7 +63,12 @@ erik.say = function(chars){
 
   if(chars.length >= 1 ) {
     setTimeout(function(){
-      erik.say(chars);
+      if (erik.speaking === true) {
+        erik.say(chars);
+      } else {
+        erik.talk(chars.join(""));
+      }
+      
     }, timeout);
   } else {
     erik.stopSpeaking();

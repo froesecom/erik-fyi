@@ -11,11 +11,13 @@ body {
 
 #speaker-box {
   border: 2px solid;
+  color: #06C5CF;
   border-color: #0195BD;
   max-width: 600px;
-  height: 150px;
+  min-height: 150px;
   margin: auto;
   margin-bottom: 20px;
+  padding: 15px;
 }
 
 #sprite-erik {
