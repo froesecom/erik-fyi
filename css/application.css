@@ -29,4 +29,12 @@ body {
 
 }
 
+@media (max-width: 767px) {
+  span.line-break-mobile {
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+
 
