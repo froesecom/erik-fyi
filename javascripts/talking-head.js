@@ -26,8 +26,12 @@ erik.init = function(){
 
 erik.talk = function(words){
   erik.speaking = true;
-  erik.say(words.split(""));
-  erik.animate();
+  $( "#speaker-box" ).fadeTo( "medium" , 1, function() {
+     erik.say(words.split(""));
+    erik.animate();
+  });
+
+
 };
 
 erik.animate = function(){
@@ -67,8 +71,7 @@ erik.say = function(chars){
         erik.say(chars);
       } else {
         erik.talk(chars.join(""));
-      }
-      
+      }    
     }, timeout);
   } else {
     erik.stopSpeaking();
@@ -76,8 +79,10 @@ erik.say = function(chars){
 };
 
 erik.stopSpeaking = function(){
+  $( "#speaker-box" ).fadeTo( "medium" , 0.5);
   erik.speaking = false;
   erik.sprite.moveToFrame(0);
+
 };
 
 

@@ -12,7 +12,8 @@ body {
 #speaker-box {
   border: 2px solid;
   color: #06C5CF;
-  border-color: #0195BD;
+  border-color: #D33F31;
+  opacity: 0.5;
   max-width: 600px;
   min-height: 150px;
   margin: auto;
