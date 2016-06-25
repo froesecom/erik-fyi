@@ -30,8 +30,12 @@ erik.talk = function(words){
      erik.say(words.split(""));
     erik.animate();
   });
+};
 
-
+erik.textFadeOut = function(){
+  setTimeout(function(){
+    $( "#speaker-box" ).fadeTo( "slow" , 0.2);
+  }, 250);
 };
 
 erik.animate = function(){
@@ -42,7 +46,7 @@ erik.animate = function(){
       //append to end of frames
       frames.push(f);
       erik.sprite.moveToFrame(f);
-      setTimeout(chatterBox, 150);
+      setTimeout(chatterBox, 130);
       
     }
   }
@@ -54,7 +58,7 @@ erik.say = function(chars){
   var timeout;
   
   if (char === ","){
-    timeout = 400;
+    timeout = 200;
     erik.stopSpeaking();
   } else if (char.search(/[!.:;?]/) >= 0) {
     timeout = 800;
@@ -75,11 +79,11 @@ erik.say = function(chars){
     }, timeout);
   } else {
     erik.stopSpeaking();
+    erik.textFadeOut();
   }; 
 };
 
 erik.stopSpeaking = function(){
-  $( "#speaker-box" ).fadeTo( "medium" , 0.5);
   erik.speaking = false;
   erik.sprite.moveToFrame(0);
 
