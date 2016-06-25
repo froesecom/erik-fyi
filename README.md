@@ -1,10 +1,8 @@
 # erik.fyi
-One day, I will finally build my personal website. Promise.
+Derp. My personal website.
 
 ## TODO
-- mobile media queries for speaker box etc
-- animate speaker box borders in and out
-- add meta data
+- add open graph image for sharing
 - add typing function
 - minimise assets
 - optimise sprite
