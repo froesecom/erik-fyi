@@ -9,6 +9,10 @@ body {
   background-color: #03151F;
 }
 
+p.hidden {
+  display: none;
+}
+
 #speaker-box {
   border: 2px solid;
   color: #001949;
