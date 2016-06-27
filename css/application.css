@@ -21,7 +21,7 @@ p.hidden {
   background-color: rgba(234, 234, 234, 0.8);
   opacity: 0.2;
   max-width: 580px;
-  min-height: 150px;
+  min-height: 3em;
   margin: auto;
   margin-bottom: 20px;
   padding: 25px;
@@ -38,6 +38,7 @@ p.hidden {
 
 }
 
+/*TABLET OR LESS*/
 @media (max-width: 767px) {
   span.line-break-mobile {
     display: block;
@@ -45,5 +46,22 @@ p.hidden {
   }
 }
 
+/*MOBILE*/
+@media (max-width: 450px) {
+  h2.intro {
+    display: none;
+  }
+
+  div#speaker-box {
+    padding: 15px;
+  }
+}
+
+/*BIGGER THAN MOBILE*/
+@media (min-width: 450px) {
+  div#speaker-box {
+    max-height: 150px;
+  }
+}
 
 

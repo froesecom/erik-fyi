@@ -6,4 +6,4 @@ Derp. My personal website.
 - add typing function
 - minimise assets
 - optimise sprite
-- add GA
+- favicon add
