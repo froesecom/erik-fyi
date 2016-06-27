@@ -24,7 +24,7 @@ p.hidden {
   min-height: 3em;
   margin: auto;
   margin-bottom: 20px;
-  padding: 25px;
+  padding: 50px 30px;
 }
 
 #sprite-erik {
@@ -52,16 +52,14 @@ p.hidden {
     display: none;
   }
 
-  div#speaker-box {
+  #speaker-box {
     padding: 15px;
   }
 }
 
 /*BIGGER THAN MOBILE*/
 @media (min-width: 450px) {
-  div#speaker-box {
-    max-height: 150px;
-  }
+  
 }
 
 
