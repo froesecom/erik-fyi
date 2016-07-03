@@ -1,4 +1,4 @@
 $(window).load(function() {
   erik.init();
-  erik.talk("Nothing to see here, move along.");
+  doomMachine.fireItUp();
 });
