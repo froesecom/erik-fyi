@@ -1,5 +1,5 @@
 # erik.fyi
-Derp. My personal website.
+Derp. My personal website. [erik.fyi](http://erik.fyi)
 
 ## TODO
 - add open graph image for sharing
