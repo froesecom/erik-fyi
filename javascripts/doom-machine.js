@@ -1,8 +1,15 @@
 doomMachine = {
   queue: [],
   busy: false,
+  randomNum: function(possibleNums, startOfRange) {
+    return Math.floor(Math.random() * possibleNums) + startOfRange; 
+  },
   idleFunctions: [
-    function(){console.log("blar")}
+    function(){
+      //facial expressions
+      var frame = doomMachine.randomNum(2, 3); //frames 3 and 4 have facial expressions
+      erik.sprite.moveToFrame(frame);
+    }
   ]
 };
 

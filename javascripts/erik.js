@@ -47,7 +47,7 @@ erik.animate = function(){
       //append to end of frames
       frames.push(f);
       erik.sprite.moveToFrame(f);
-      setTimeout(chatterBox, 130);
+      setTimeout(chatterBox, 110);
       
     }
   }
