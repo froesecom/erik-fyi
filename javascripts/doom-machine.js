@@ -3,13 +3,15 @@ doomMachine = {
 };
 
 doomMachine.eatTheQueue = function(){
-  this.queue[0]();
+  if (doomMachine.queue.length > 0 && !erik.busy) {
+    doomMachine.queue.shift()();
+  }
 };
 
 doomMachine.fireItUp = function(){
   //intialize doom machine
   this.queue.push(function(){erik.talk("Nothing to see here, move along.");});
-  this.eatTheQueue();
+  setInterval(this.eatTheQueue, 400);
 };
 
 
