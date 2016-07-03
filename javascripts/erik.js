@@ -13,7 +13,8 @@ var erik = {
     },
     talkingFrames: [1,2,1,0]
   },
-  speaking: false
+  speaking: false,
+  busy: false
 };
 
 erik.init = function(){
@@ -25,7 +26,8 @@ erik.init = function(){
 }
 
 erik.talk = function(words){
-  erik.speaking = true;
+  this.speaking = true;
+  this.busy = true;
   $( "#speaker-box" ).fadeTo( "medium" , 1, function() {
      erik.say(words.split(""));
     erik.animate();
@@ -59,10 +61,10 @@ erik.say = function(chars){
   
   if (char === ","){
     timeout = 200;
-    erik.stopSpeaking();
+    erik.stopSpeaking(true);
   } else if (char.search(/[!.:;?]/) >= 0) {
     timeout = 800;
-    erik.stopSpeaking();
+    erik.stopSpeaking(true);
   } else {
     timeout = 80;
   }
@@ -78,14 +80,19 @@ erik.say = function(chars){
       }    
     }, timeout);
   } else {
-    erik.stopSpeaking();
-    erik.textFadeOut();
+    erik.stopSpeaking(false);
   }; 
 };
 
-erik.stopSpeaking = function(){
-  erik.speaking = false;
-  erik.sprite.moveToFrame(0);
+erik.stopSpeaking = function(hasMoreToSay){
+  this.speaking = false;
+  this.sprite.moveToFrame(0);
+
+  if (!hasMoreToSay){
+    //nothing more to say;
+    this.busy = false;
+    this.textFadeOut();
+  }
 
 };
 
