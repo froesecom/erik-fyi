@@ -13,8 +13,7 @@ var erik = {
     },
     talkingFrames: [1,2,1,0]
   },
-  speaking: false,
-  busy: false
+  speaking: false
 };
 
 erik.init = function(){
@@ -27,7 +26,7 @@ erik.init = function(){
 
 erik.talk = function(words){
   this.speaking = true;
-  this.busy = true;
+  doomMachine.busy = true;
   $( "#speaker-box" ).fadeTo( "medium" , 1, function() {
      erik.say(words.split(""));
     erik.animate();
@@ -90,7 +89,7 @@ erik.stopSpeaking = function(hasMoreToSay){
 
   if (!hasMoreToSay){
     //nothing more to say;
-    this.busy = false;
+    doomMachine.busy = false;
     this.textFadeOut();
   }
 

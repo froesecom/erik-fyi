@@ -1,11 +1,23 @@
 doomMachine = {
-  queue: []
+  queue: [],
+  busy: false,
+  idleFunctions: [
+    function(){console.log("blar")}
+  ]
 };
 
 doomMachine.eatTheQueue = function(){
-  if (doomMachine.queue.length > 0 && !erik.busy) {
-    doomMachine.queue.shift()();
-  }
+  if (!doomMachine.busy) {
+    if (doomMachine.queue.length > 0) {
+      doomMachine.queue.shift()();
+    } else {
+      doomMachine.pickIdleFunction();
+    }
+  } 
+};
+
+doomMachine.pickIdleFunction = function() {
+  doomMachine.idleFunctions[0]();
 };
 
 doomMachine.fireItUp = function(){
