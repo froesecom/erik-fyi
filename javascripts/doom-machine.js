@@ -1,30 +1,43 @@
+//an evil state machine
 doomMachine = {
   queue: [],
+  waitUntil: 0, //date-to-milliseconds until another function can be run
   busy: false,
   randomNum: function(possibleNums, startOfRange) {
     return Math.floor(Math.random() * possibleNums) + startOfRange; 
   },
   idleFunctions: [
-    function(){
-      //facial expressions
-      var frame = doomMachine.randomNum(2, 3); //frames 3 and 4 have facial expressions
-      erik.sprite.moveToFrame(frame);
-    }
+    erik.makeFacialExpression
   ]
+};
+
+doomMachine.setWaitTime = function(){
+  var waitT = doomMachine.randomNum(2000, 500),
+       date = new Date(); 
+  doomMachine.waitUntil =  date.getTime() + waitT; 
+};
+
+doomMachine.canRun = function(){
+  var d = new Date();
+  return d.getTime() > doomMachine.waitUntil;
 };
 
 doomMachine.eatTheQueue = function(){
   if (!doomMachine.busy) {
     if (doomMachine.queue.length > 0) {
+      //if something is in the queue, run it
       doomMachine.queue.shift()();
     } else {
-      doomMachine.pickIdleFunction();
+      if (doomMachine.canRun()) {
+        doomMachine.pickIdleFunction();
+      } 
     }
   } 
 };
 
 doomMachine.pickIdleFunction = function() {
-  doomMachine.idleFunctions[0]();
+  //pick a random function
+  doomMachine.idleFunctions[0](doomMachine.setWaitTime);
 };
 
 doomMachine.fireItUp = function(){

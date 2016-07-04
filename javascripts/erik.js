@@ -83,6 +83,19 @@ erik.say = function(chars){
   }; 
 };
 
+erik.makeFacialExpression = function(setWaitTime){
+  var frame = doomMachine.randomNum(2, 3); //frames 3 and 4 have facial expressions
+  var waitFor = doomMachine.randomNum(400, 1000);
+  erik.sprite.moveToFrame(frame);
+  setTimeout(function(){
+    //reset
+    if (!doomMachine.busy) {
+      erik.sprite.moveToFrame(0);
+      setWaitTime();
+    }
+  }, waitFor);
+};
+
 erik.stopSpeaking = function(hasMoreToSay){
   this.speaking = false;
   this.sprite.moveToFrame(0);
