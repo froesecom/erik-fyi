@@ -48,7 +48,6 @@ erik.animate = function(){
       frames.push(f);
       erik.sprite.moveToFrame(f);
       setTimeout(chatterBox, 110);
-      
     }
   }
   chatterBox();
@@ -95,6 +94,16 @@ erik.makeFacialExpression = function(setWaitTime){
     doomMachine.busy = false;
   }, waitFor);
 };
+
+erik.saySomethingUseless = function(setWaitTime){
+  doomMachine.busy = true;
+  var saying = this.getSaying();
+}
+
+erik.getSaying = function(){
+  //eventually get random saying in here
+  return CONTENT.idleSayings[0];
+}
 
 erik.stopSpeaking = function(hasMoreToSay){
   this.speaking = false;

@@ -7,7 +7,10 @@ doomMachine = {
     return Math.floor(Math.random() * possibleNums) + startOfRange; 
   },
   idleFunctions: [
-    erik.makeFacialExpression
+    erik.makeFacialExpression,
+    erik.makeFacialExpression,
+    erik.saySomethngUseless
+
   ]
 };
 
@@ -37,7 +40,7 @@ doomMachine.eatTheQueue = function(){
 
 doomMachine.pickIdleFunction = function() {
   //pick a random function
-  doomMachine.idleFunctions[0](doomMachine.setWaitTime);
+  doomMachine.idleFunctions[2](doomMachine.setWaitTime);
 };
 
 doomMachine.fireItUp = function(){
