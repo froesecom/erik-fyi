@@ -96,13 +96,14 @@ erik.makeFacialExpression = function(setWaitTime){
 };
 
 erik.saySomethingUseless = function(setWaitTime){
-  doomMachine.busy = true;
   var saying = erik.getSaying();
+  doomMachine.queue.push(function(){erik.talk(saying);});
 }
 
 erik.getSaying = function(){
   //eventually get random saying in here
-  return CONTENT.idleSayings[0];
+  var n = doomMachine.randomNum(CONTENT.idleSayings.length, 0);
+  return CONTENT.idleSayings[n];
 }
 
 erik.stopSpeaking = function(hasMoreToSay){
@@ -113,6 +114,9 @@ erik.stopSpeaking = function(hasMoreToSay){
     //nothing more to say;
     doomMachine.busy = false;
     this.textFadeOut();
+    setTimeout(function(){
+      $("#speaker-box").text("");
+    }, 200);
   }
 
 };
