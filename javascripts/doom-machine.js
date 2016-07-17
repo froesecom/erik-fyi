@@ -9,7 +9,7 @@ doomMachine = {
   idleFunctions: [
     erik.makeFacialExpression,
     erik.makeFacialExpression,
-    erik.saySomethngUseless
+    erik.saySomethingUseless
 
   ]
 };
@@ -40,7 +40,9 @@ doomMachine.eatTheQueue = function(){
 
 doomMachine.pickIdleFunction = function() {
   //pick a random function
-  doomMachine.idleFunctions[2](doomMachine.setWaitTime);
+  var n = doomMachine.randomNum(doomMachine.idleFunctions.length, 0);
+  console.log("n" + n);
+  doomMachine.idleFunctions[n](doomMachine.setWaitTime);
 };
 
 doomMachine.fireItUp = function(){

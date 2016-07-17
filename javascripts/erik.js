@@ -97,7 +97,7 @@ erik.makeFacialExpression = function(setWaitTime){
 
 erik.saySomethingUseless = function(setWaitTime){
   doomMachine.busy = true;
-  var saying = this.getSaying();
+  var saying = erik.getSaying();
 }
 
 erik.getSaying = function(){
