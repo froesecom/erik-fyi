@@ -41,7 +41,6 @@ doomMachine.eatTheQueue = function(){
 doomMachine.pickIdleFunction = function() {
   //pick a random function
   var n = doomMachine.randomNum(doomMachine.idleFunctions.length, 0);
-  console.log("n" + n);
   doomMachine.idleFunctions[n](doomMachine.setWaitTime);
 };
 
