@@ -1,4 +1,6 @@
-$(window).load(function() {
-  erik.init();
-  doomMachine.fireItUp();
+$(function(){
+  $("#erik-head").load(function() {
+    erik.init();
+    doomMachine.fireItUp();
+  });
 });
