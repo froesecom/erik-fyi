@@ -48,7 +48,6 @@ erik.animate = function(){
       frames.push(f);
       erik.sprite.moveToFrame(f);
       setTimeout(chatterBox, 110);
-      
     }
   }
   chatterBox();
@@ -96,6 +95,17 @@ erik.makeFacialExpression = function(setWaitTime){
   }, waitFor);
 };
 
+erik.saySomethingUseless = function(setWaitTime){
+  var saying = erik.getSaying();
+  doomMachine.queue.push(function(){erik.talk(saying);});
+}
+
+erik.getSaying = function(){
+  //eventually get random saying in here
+  var n = doomMachine.randomNum(CONTENT.idleSayings.length, 0);
+  return CONTENT.idleSayings[n];
+}
+
 erik.stopSpeaking = function(hasMoreToSay){
   this.speaking = false;
   this.sprite.moveToFrame(0);
@@ -104,6 +114,9 @@ erik.stopSpeaking = function(hasMoreToSay){
     //nothing more to say;
     doomMachine.busy = false;
     this.textFadeOut();
+    setTimeout(function(){
+      $("#speaker-box").text("");
+    }, 200);
   }
 
 };
