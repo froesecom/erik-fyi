@@ -13,6 +13,16 @@ p.hidden {
   display: none;
 }
 
+nav {
+  display: block;
+}
+
+ul.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
 #speaker-box {
   border: 2px solid;
   color: #001949;
