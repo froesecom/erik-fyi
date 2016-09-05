@@ -2,10 +2,12 @@
 Derp. My personal website. [erik.fyi](http://erik.fyi)
 
 ## TODO
+- figure out how to deploy to github pages using Jekyll
+- clean up this layout mess, and get pages working with their own layout
+- write up a quick about page
+- get about in nav
+- add some fireballs already
+- minify assets
 - add open graph image for sharing
-- loading animation
-- get [Jekyll](https://jekyllrb.com/docs/usage/) going
-- add typing function
-- minify assets (https://www.npmjs.com/package/minifier)
 - optimise sprite
 - favicon add
