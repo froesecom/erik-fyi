@@ -26,3 +26,11 @@ linkedin_url: https://au.linkedin.com/in/erik-froese-82987833
 # Build settings
 markdown: kramdown
 theme: minima
+
+# Where things are
+source:      .
+destination: ./_site
+plugins_dir:     ./_plugins
+layouts_dir:     ./_layouts
+data_dir: ./_data
+ 
