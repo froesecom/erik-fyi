@@ -38,13 +38,14 @@ ul.nav-list {
 }
 
 #sprite-erik {
-  display:none;
+  visibility:hidden;
   overflow: hidden;
   margin: auto;
 }
 
 #erik-head {
   position: relative;
+  max-width: none;
 
 }
 

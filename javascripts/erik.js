@@ -20,7 +20,7 @@ erik.init = function(){
   //dynamically set height and width here
   //use baseWidth/baseHeight to set width/height
   $("#erik-head").height(erik.sprite.frame.height)
-  $("#sprite-erik").height(erik.sprite.frame.height).width(erik.sprite.frame.width).show();
+  $("#sprite-erik").height(erik.sprite.frame.height).width(erik.sprite.frame.width).css('visibility', 'visible');
 
 }
 
