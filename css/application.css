@@ -10,23 +10,23 @@ header {
 
 .menu-btn{
   background: #0051F8;
-  height: 10px;
+  height: 7px;
   position: absolute;
   right:30px;
   top: 30px;
-  width: 50px;
+  width: 30px;
 }
 .menu-btn:before, 
 .menu-btn:after{
+  background: #0051F8;
   content: "";
+  height: 7px;
   left: 0;
   position: absolute;
   right: 0;
-  background: #0051F8;
-  height: 10px;
 } 
-.menu-btn:before{ top: -15px; }
-.menu-btn:after{ bottom: -15px; }
+.menu-btn:before{ top: -9px; }
+.menu-btn:after{ bottom: -9px; }
 
 .responsive-menu{
   display: none;
