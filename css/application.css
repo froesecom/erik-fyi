@@ -34,9 +34,19 @@ header {
 } 
 .menu-btn:before{ top: -9px; }
 .menu-btn:after{ bottom: -9px; }
+.menu-close {
+  text-align: right;
+  padding: 30px 30px 0 0;
+  font-size: 50px;
+}
 
 .responsive-menu{
   display: none;
+  background: white;
+  position: absolute;
+  right: 0;
+  width: 200px;
+  height: 1500px;
 }
 
 .expand {
