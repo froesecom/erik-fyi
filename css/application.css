@@ -9,16 +9,23 @@ header {
 }
 
 .menu-btn{
-  background: #0051F8;
+  background: #A6EBD6;
   height: 7px;
   position: absolute;
   right:50px;
   top: 50px;
   width: 30px;
 }
+.menu-btn:hover {
+  background: #0195BD;
+}
+.menu-btn:hover:before,
+.menu-btn:hover:after{
+  background: #0195BD;
+}
 .menu-btn:before, 
 .menu-btn:after{
-  background: #0051F8;
+  background:  #A6EBD6;
   content: "";
   height: 7px;
   left: 0;
