@@ -5,15 +5,15 @@
 }
 
 header {
-  height:50px;
+  height:90px;
 }
 
 .menu-btn{
   background: #0051F8;
   height: 7px;
   position: absolute;
-  right:30px;
-  top: 30px;
+  right:50px;
+  top: 50px;
   width: 30px;
 }
 .menu-btn:before, 
@@ -94,7 +94,13 @@ ul.nav-list {
   h2.intro {
     display: none;
   }
-
+  .menu-btn {
+    right: 30px;
+    top: 40px;
+  }
+  header {
+    height: 50px;
+  }
   #speaker-box {
     padding: 15px;
   }
