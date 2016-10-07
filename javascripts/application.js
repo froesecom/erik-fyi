@@ -5,11 +5,7 @@ $(function(){
   });
 
   $('.menu-btn').click(function(){
-    $('.responsive-menu').addClass('expand');
+    $('.menu').toggleClass('expand');
   });
  
-  $('.menu-close').click(function(){
-    $('.responsive-menu').removeClass('expand');
-  });
-
 });
