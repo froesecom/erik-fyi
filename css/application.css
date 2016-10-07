@@ -9,6 +9,7 @@ header {
 }
 
 .menu-btn{
+  z-index: 3;
   background: #A6EBD6;
   height: 7px;
   position: absolute;
@@ -16,13 +17,16 @@ header {
   top: 50px;
   width: 30px;
 }
+
 .menu-btn:hover {
   background: #0195BD;
 }
+
 .menu-btn:hover:before,
 .menu-btn:hover:after{
   background: #0195BD;
 }
+
 .menu-btn:before, 
 .menu-btn:after{
   background:  #A6EBD6;
@@ -32,19 +36,20 @@ header {
   position: absolute;
   right: 0;
 } 
+
 .menu-btn:before{ top: -9px; }
 .menu-btn:after{ bottom: -9px; }
-.menu-close {
-  text-align: right;
-  padding: 30px 30px 0 0;
-  font-size: 50px;
+
+.menu-list {
+  padding-top: 100px;
 }
 
-.responsive-menu{
+.menu{
   display: none;
-  background: white;
+  background: #868585;
   position: absolute;
   right: 0;
+  color: #A6EBD6;
   width: 200px;
   height: 1500px;
 }
@@ -127,5 +132,6 @@ ul.nav-list {
 @media (min-width: 450px) {
   
 }
+
 
 
