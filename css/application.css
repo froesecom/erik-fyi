@@ -42,9 +42,11 @@ header {
 
 .menu-list {
   padding-top: 100px;
+  list-style: none;
 }
 
 .menu{
+  z-index: 1;
   display: none;
   background: #868585;
   position: absolute;
