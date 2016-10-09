@@ -8,3 +8,7 @@ h1{
   font-family: "Verdana";
   color: #A6EBD6;
 }
+
+.menu li a {
+  color: #032C30;
+}

@@ -6,6 +6,7 @@ $(function(){
 
   $('.menu-btn').click(function(){
     $('.menu').toggleClass('expand');
+    $(this).toggleClass('menu-btn-open');
   });
  
 });
