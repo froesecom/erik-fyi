@@ -41,19 +41,26 @@ header {
 .menu-btn:after{ bottom: -9px; }
 
 .menu-list {
+  margin: 40px 0 0 60px;
   padding-top: 100px;
   list-style: none;
 }
 
 .menu{
   z-index: 1;
+  line-height: 2;
   display: none;
-  background: #868585;
+  background: white;
+  font-size: x-large;
   position: absolute;
   right: 0;
   color: #A6EBD6;
   width: 200px;
   height: 1500px;
+}
+
+.menu-btn-open {
+  transform: rotate(45deg);
 }
 
 .expand {
