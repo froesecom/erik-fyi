@@ -9,6 +9,10 @@ h1{
   color: #A6EBD6;
 }
 
+a, a:visited, a:hover {
+  color: #00BA31;
+}
+
 .menu li a {
   color: #032C30;
 }

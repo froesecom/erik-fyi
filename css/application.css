@@ -67,6 +67,9 @@ header {
   display: block !important; 
 }
 
+.email {
+  display: none;
+}
 /*CHROME*/
 body {
   background-color: #03151F;
