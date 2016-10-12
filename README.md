@@ -4,7 +4,7 @@ Derp. My personal website. [erik.fyi](http://erik.fyi)
 Uses Jekyll and jQuery. Other than that, pretty vanilla.
 
 ## TODO
-- add meta descriptions to about page
+- make a better speach bubble
 - add some fireballs already
 - minify assets
 - add open graph image for sharing

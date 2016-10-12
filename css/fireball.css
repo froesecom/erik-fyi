@@ -1,0 +1,16 @@
+.fireball-container {
+  position: absolute;
+  bottom: 0;
+}
+
+.fireball-1-window {
+  position: relative;
+  max-width: 400px;
+  overflow: hidden;
+  margin: auto;
+}
+
+#fireball-1 {
+  position: relative;
+  max-width: none;
+}
