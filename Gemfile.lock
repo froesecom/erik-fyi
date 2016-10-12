@@ -136,9 +136,3 @@ DEPENDENCIES
   github-pages
   jekyll (= 3.2.1)
   minima
-
-RUBY VERSION
-   ruby 2.3.1p112
-
-BUNDLED WITH
-   1.12.5
