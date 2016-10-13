@@ -44,13 +44,20 @@ doomMachine.pickIdleFunction = function() {
   doomMachine.idleFunctions[n](doomMachine.setWaitTime);
 };
 
-doomMachine.blowShitUp = function(){
-  console.log("boommm!");
+doomMachine.blowShitUp = function(opts){
+  if (opts && opts.makeBusy){
+    //hold up the queue while fireballs blow up
+    doomMachine.busy = true;
+  }
+  fireball.explode(function(){doomMachine.busy = false});
 };
 
 doomMachine.fireItUp = function(){
-  //intialize doom machine
-  this.queue.push(erik.init, doomMachine.blowShitUp, function(){erik.talk("Nothing to see here, move along.");});
+  //intialize doom machine with firball and then make erik talk
+  this.queue.push(erik.init,
+      function(){doomMachine.blowShitUp({makeBusy: true})},
+      function(){erik.talk("Nothing to see here, move along.");
+     });
   setInterval(this.eatTheQueue, 400);
 };
 
