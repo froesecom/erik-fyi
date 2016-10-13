@@ -44,9 +44,13 @@ doomMachine.pickIdleFunction = function() {
   doomMachine.idleFunctions[n](doomMachine.setWaitTime);
 };
 
+doomMachine.blowShitUp = function(){
+  console.log("boommm!");
+};
+
 doomMachine.fireItUp = function(){
   //intialize doom machine
-  this.queue.push(function(){erik.talk("Nothing to see here, move along.");});
+  this.queue.push(erik.init, doomMachine.blowShitUp, function(){erik.talk("Nothing to see here, move along.");});
   setInterval(this.eatTheQueue, 400);
 };
 

@@ -1,6 +1,6 @@
 $(function(){
-  $("#erik-head").load(function() {
-    erik.init();
+  $("#erik-head, #fireball-1").load(function() {
+//    erik.init();
     doomMachine.fireItUp();
   });
 
