@@ -5,6 +5,7 @@ Uses Jekyll and jQuery. Other than that, pretty vanilla.
 
 ## TODO
 - make a better speach bubble
+- add sitemap
 - add some fireballs already
 - minify assets
 - add open graph image for sharing

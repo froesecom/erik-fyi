@@ -9,6 +9,11 @@
 }
 
 #fireball-1 {
+  /* height and width of fireball sprite */
+  height: 400px;
+  width: 10000px;
+
   position: relative;
+  background-image: url('/public/flm.png');
   max-width: none;
 }
