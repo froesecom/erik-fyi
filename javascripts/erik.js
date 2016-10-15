@@ -17,6 +17,7 @@ var erik = {
 };
 
 erik.init = function(){
+  $("#speaker-box").css("visibility", "visible");
   //dynamically set height and width here
   //use baseWidth/baseHeight to set width/height
   $("#erik-head").height(erik.sprite.frame.height)
