@@ -53,9 +53,17 @@ doomMachine.blowShitUp = function(opts){
 };
 
 doomMachine.fireItUp = function(){
-  //intialize doom machine with firball and then make erik talk
-  this.queue.push(erik.init,
-      function(){doomMachine.blowShitUp({makeBusy: true})},
+  //intialize doom machine with fireball and then make erik talk
+  
+  this.queue.push(
+      function(){fireball.explode(
+        {
+          preFunc: function(){doomMachine.busy = true},
+          callback: function(){doomMachine.busy = false  }
+        }
+       )
+      },
+      erik.init,
       function(){erik.talk("Nothing to see here, move along.");
      });
   setInterval(this.eatTheQueue, 400);
