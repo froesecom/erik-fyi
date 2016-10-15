@@ -1,19 +1,43 @@
-.fireball-1-window {
+.fireball-window {
   left: 0;
   right: 0;
   position: absolute;
   bottom: 0;
-  max-width: 400px;
+  max-width: 800px;
   overflow: hidden;
   margin: auto;
 }
 
-#fireball-1 {
+.fireball {
   /* height and width of fireball sprite */
-  height: 400px;
-  width: 10000px;
+  height: 800px;
+  width: 20000px;
 
   position: relative;
-  background-image: url('/public/flm.png');
+  background: url('/public/flm.png') no-repeat;
+  background-size: cover;
   max-width: none;
 }
+
+/*TABLET OR LESS*/
+@media (max-width: 767px) {
+  .fireball-window {
+    max-width: 400px;
+  }
+
+  .fireball {
+    height: 400px;
+    width: 1000px;
+  }
+}
+
+/*MOBILE*/
+@media (max-width: 450px) {
+}
+
+/*BIGGER THAN MOBILE*/
+@media (min-width: 450px) {
+  
+}
+
+
