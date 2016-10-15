@@ -101,6 +101,7 @@ ul.nav-list {
   margin: auto;
   margin-bottom: 20px;
   padding: 50px 30px;
+  visibility: hidden;
 }
 
 #sprite-erik {
