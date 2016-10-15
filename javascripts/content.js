@@ -1,7 +1,7 @@
 CONTENT = {
   idleSayings: [
-    "This website is a work in progress, obvs. ",
-    "I can't wait until the fireworks arrive. Come back in a week or two. ",
-    "Not impressed? I'm not finished yet! "
+    "This website is a work in progress. ",
+    "Finally, some fireballs!",
+    "Not impressed? Oh well."
   ]
 }

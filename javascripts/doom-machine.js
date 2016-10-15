@@ -7,6 +7,7 @@ doomMachine = {
     return Math.floor(Math.random() * possibleNums) + startOfRange; 
   },
   idleFunctions: [
+    fireball.explode,
     erik.makeFacialExpression,
     erik.makeFacialExpression,
     erik.saySomethingUseless
@@ -44,14 +45,6 @@ doomMachine.pickIdleFunction = function() {
   doomMachine.idleFunctions[n](doomMachine.setWaitTime);
 };
 
-doomMachine.blowShitUp = function(opts){
-  if (opts && opts.makeBusy){
-    //hold up the queue while fireballs blow up
-    doomMachine.busy = true;
-  }
-  fireball.explode(function(){doomMachine.busy = false});
-};
-
 doomMachine.fireItUp = function(){
   //intialize doom machine with fireball and then make erik talk
   
@@ -59,7 +52,7 @@ doomMachine.fireItUp = function(){
       function(){fireball.explode(
         {
           preFunc: function(){doomMachine.busy = true},
-          callback: function(){doomMachine.busy = false  }
+          callback: function(){doomMachine.busy = false; $(".fireball").css("z-index", "-1");  }
         }
        )
       },
