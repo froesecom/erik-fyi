@@ -3,7 +3,7 @@
   right: 0;
   position: absolute;
   bottom: 0;
-  max-width: 800px;
+  width: 800px;
   overflow: hidden;
   margin: auto;
 }
@@ -22,7 +22,7 @@
 /*TABLET OR LESS*/
 @media (max-width: 767px) {
   .fireball-window {
-    max-width: 400px;
+    width: 400px;
   }
 
   .fireball {
@@ -33,6 +33,11 @@
 
 /*MOBILE*/
 @media (max-width: 450px) {
+}
+
+/*anything smaller than 400 is going to mess with my fireballs*/
+@media (max-width: 400px) {
+  .fireball-window {left: -40px;} /*close enough*/
 }
 
 /*BIGGER THAN MOBILE*/
