@@ -55,8 +55,8 @@ header {
   position: absolute;
   right: 0;
   color: #A6EBD6;
-  width: 200px;
   height: 1500px;
+  padding-right: 36px;
 }
 
 .menu-btn-open {
@@ -134,7 +134,7 @@ ul.nav-list {
     top: 40px;
   }
   header {
-    height: 50px;
+    min-height: 50px;
   }
   #speaker-box {
     padding: 15px;
