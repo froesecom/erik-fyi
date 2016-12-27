@@ -126,7 +126,7 @@ ul.nav-list {
 
 /*MOBILE*/
 @media (max-width: 450px) {
-  h2.intro {
+  h3.intro {
     display: none;
   }
   .menu-btn {
