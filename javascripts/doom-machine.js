@@ -64,7 +64,6 @@ doomMachine.pickIdleFunction = function() {
 
 doomMachine.fireItUp = function(){
   //intialize doom machine with fireball and then make erik talk
- console.log("firing it up") 
   doomMachine.queue.push(
       function(){fireball.explode(
         {
@@ -74,8 +73,8 @@ doomMachine.fireItUp = function(){
        )
       },
       erik.init,
-      function(){erik.talk("Nothing to see here, move along.");
-     });
+      function(){erik.talk("Hey good looking. What you got cooking?");}
+    );
   setInterval(doomMachine.eatTheQueue, 400);
 }
 

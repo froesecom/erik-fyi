@@ -15,14 +15,11 @@ var fireball = {
 
 fireball.explode = function(opts){
   var frames = fireball.sprite.frames.slice(0);//slice duplicates array otherwise modify variable modifies original array
-  console.log(frames);
   fireball.sprite.frame.width = $(".fireball-window").width(); //the width of the frame is determined by css
   
   if(opts.preFunc){
     opts.preFunc.call();
   }
-  console.log(doomMachine.busy);
-  console.log("boom");
   
   function burnFrames(fs){
     var f = fs.shift();
