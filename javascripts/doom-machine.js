@@ -15,16 +15,27 @@ doomMachine = {
   ]
 };
 
+doomMachine.loadImg = function(imgPath){
+  return $.Deferred();  
+}
+
+doomMachine.preloadImages = function(){
+  var loadHead = this.loadImg("public/head-sprite.png"),
+      loadFire = this.loadImg("public/flm.png");
+  
+  return $.when(loadHead, loadFire);
+}
+
 doomMachine.setWaitTime = function(){
   var waitT = doomMachine.randomNum(2000, 500),
        date = new Date(); 
   doomMachine.waitUntil =  date.getTime() + waitT; 
-};
+}
 
 doomMachine.canRun = function(){
   var d = new Date();
   return d.getTime() > doomMachine.waitUntil;
-};
+}
 
 doomMachine.eatTheQueue = function(){
   if (!doomMachine.busy) {
@@ -37,13 +48,13 @@ doomMachine.eatTheQueue = function(){
       } 
     }
   } 
-};
+}
 
 doomMachine.pickIdleFunction = function() {
   //pick a random function
   var n = doomMachine.randomNum(doomMachine.idleFunctions.length, 0);
   doomMachine.idleFunctions[n](doomMachine.setWaitTime);
-};
+}
 
 doomMachine.fireItUp = function(){
   //intialize doom machine with fireball and then make erik talk
@@ -60,6 +71,6 @@ doomMachine.fireItUp = function(){
       function(){erik.talk("Nothing to see here, move along.");
      });
   setInterval(this.eatTheQueue, 400);
-};
+}
 
 

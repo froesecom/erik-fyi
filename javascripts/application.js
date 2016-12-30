@@ -1,8 +1,10 @@
 $(function(){
-  $("#erik-head, .fireball").load(function() {
-//    erik.init();
-    doomMachine.fireItUp();
-  });
+  doomMachine.preloadImages()
+  .then(function(){console.log("nope")});
+  //.then(doomMachine.fireItUp);
+  //$("#erik-head, .fireball").load(function() {
+  //  doomMachine.fireItUp();
+ // });
 
   //build email address so shady bots don't scrape it
   setTimeout(function(){
