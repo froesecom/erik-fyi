@@ -27,7 +27,7 @@ doomMachine.loadImg = function(imgPath){
 
 doomMachine.preloadImages = function(){
   var loadHead = this.loadImg("public/head-sprite.png"),
-      loadFire = this.loadImg("public/flm.png");
+      loadFire = this.loadImg("/public/flm.png");
   
   return $.when(loadHead, loadFire);
 }
@@ -64,8 +64,8 @@ doomMachine.pickIdleFunction = function() {
 
 doomMachine.fireItUp = function(){
   //intialize doom machine with fireball and then make erik talk
-  
-  this.queue.push(
+ console.log("firing it up"); 
+  doomMachine.queue.push(
       function(){fireball.explode(
         {
           preFunc: function(){doomMachine.busy = true},

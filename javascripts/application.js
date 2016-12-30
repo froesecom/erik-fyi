@@ -1,7 +1,6 @@
 $(function(){
   doomMachine.preloadImages()
-  .then(function(){console.log("nope")});
-  //.then(doomMachine.fireItUp);
+  .then(doomMachine.fireItUp);
   //$("#erik-head, .fireball").load(function() {
   //  doomMachine.fireItUp();
  // });
