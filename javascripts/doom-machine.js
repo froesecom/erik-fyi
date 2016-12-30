@@ -16,7 +16,13 @@ doomMachine = {
 };
 
 doomMachine.loadImg = function(imgPath){
-  return $.Deferred();  
+  var deferred = $.Deferred(),
+      img = new Image();
+  
+  img.onload = function(){deferred.resolve()};
+     img.src = imgPath;
+
+  return deferred;
 }
 
 doomMachine.preloadImages = function(){
