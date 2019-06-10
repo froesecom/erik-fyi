@@ -73,7 +73,7 @@ doomMachine.fireItUp = function(){
        )
       },
       erik.init,
-      function(){erik.talk("Hey good looking. What you got cooking?");}
+      function(){erik.talk("Pay no attention to that man behind the curtain.");}
     );
   setInterval(doomMachine.eatTheQueue, 400);
 }
